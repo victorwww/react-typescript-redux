@@ -29,7 +29,7 @@ class RepositoryList extends Component<Props> {
 
         return (
             <ul>
-                {repositories.map(repository => repository.name)}
+                {repositories.map(repository => <li>{repository.name}</li>)}
             </ul>
         )
     }
@@ -39,7 +39,6 @@ const mapStateToProps = (state: ApplicationState) => ({
     repositories: state.repositories.data
 })
 
-const mapDispatchToProps = (dispatch: Dispatch) => 
-    bindActionCreators(RepositoriesActions, dispatch)
+const mapDispatchToProps = (dispatch: Dispatch) => bindActionCreators(RepositoriesActions, dispatch)
 
-export default connect(mapStateToProps)(RepositoryList)
+export default connect(mapStateToProps, mapDispatchToProps)(RepositoryList)

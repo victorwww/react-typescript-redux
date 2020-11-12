@@ -2,9 +2,9 @@ import { Reducer } from 'redux'
 import { RepositoriesState, RepositoriesTypes } from './types'
 
 const INITIAL_STATE: RepositoriesState = {
-    data: [{
-        id: 1, name: 'Victor-react'
-    }],
+    data: [
+        { id: 1, name: 'Victor-react'},
+    ],
     error: false,
     loading: false
 }
